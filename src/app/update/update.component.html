@@ -1,0 +1,50 @@
+<div class="col-sm-5">
+<div class="form-data">
+    <div class="form-head">
+        <h2>Update Appointment</h2>
+    </div>
+    <div class="form-body">
+      <form (ngSubmit)="onSubmit()">
+    
+      
+        <div class="row form-row">
+          <label for="doctor" class="form-label">Preferred Doctor:</label>
+          
+        <select class="form-control" required #dname id="doctor" [(ngModel)]="user.doctor" name="doctor">
+          
+            <option >Dr Siva Kumar</option>
+            <option >Dr Monika</option>
+            <option >Dr Priya</option>
+            <option >Dr David</option>
+          </select>
+        </div>
+        
+       <div class="row form-row">
+        <label for="date" class="form-label">Appointment Date:</label>
+          <input id="dat" type="date"  class="form-control"  required #d id="appointmentdate" [(ngModel)]="user.appointmentdate" name="appointmentdate">
+        </div>
+        <div class="row form-row">
+          <label for="time" class="form-label">Appointment Time:</label>
+          <input id="dat" type="time"  class="form-control"  required id="appointmenttime" [(ngModel)]="user.appointmenttime" name="appointmenttime">
+        </div>
+        
+        <div class="row form-row">
+            <label for="date" class="form-label">Appointment Status:</label>
+              <input id="dat" type="text"  class="form-control"  required #d id="status" [(ngModel)]="user.status" name="status">
+            </div>
+
+         <div class="row form-row">
+           <button class="btn btn-success btn-appointment" type="submit" >
+             Update Appointment
+           </button>
+           
+        </div>
+        
+          
+       
+        </form>
+
+    </div>
+</div>
+</div>
+

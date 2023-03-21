@@ -1,0 +1,15 @@
+.table{
+    
+    margin: 10px;
+    width: 60%;
+    margin-left: 20px;
+ }
+ thead{
+     color: #16a085;
+     background-color: white;
+     text-align: center;
+     font-weight: bold;
+ }
+ td{
+    text-align: justify;
+ }

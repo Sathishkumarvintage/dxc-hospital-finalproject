@@ -1,0 +1,32 @@
+<section class="our-team">
+    <div class="container">
+        <div class="inner-title">
+            <h2>Our Team</h2>
+            <p>Take a look at our Team</p>
+        </div>
+        
+        <div class="row ">
+            <div class="col-sm-8">
+            <div class="float">
+                <h1>Medicines Cure Diseases, But Doctors Can Cure Patients</h1>
+            </div>
+            </div>
+            <div class="col-sm-4">
+                <div *ngFor="let d of user">
+                <div class="single-usr">
+                    
+                    <div class="det-o">
+                       
+                        <h4>{{d.doctorname}}</h4>
+                        <i>{{d.specialists}}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    </section>
+
+
+

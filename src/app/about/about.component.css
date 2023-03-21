@@ -1,0 +1,17 @@
+.with-medical {
+    padding: 80px 50px;
+    background-color: #FFF; }
+@media screen and (max-width: 940px) {
+.with-medical {
+        padding: 30px 10px; } }
+.with-medical .txtr {
+      padding: 10px; }
+.with-medical .txtr h4 {
+        color:rgb(95, 91, 91); 
+        font-size: 32px; }
+ .with-medical .txtr h4 span {
+          color:#16a085 }
+ .with-medical .txtr p {
+        text-align: justify;
+        text-indent: 20px;
+        font-size: 1.1rem; }

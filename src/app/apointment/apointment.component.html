@@ -1,0 +1,144 @@
+
+<div class="inner-layer">
+    <div class="container">
+      <div class="row no-margin">
+          <div class="col-sm-7">
+              <div class="content">
+                  <h1>Book Your Slot Now and Save your time</h1>
+                  
+              </div>
+          </div>
+         
+          <div class="col-sm-5">
+            <div *ngIf="!submitted">
+              <div class="form-data">
+                  <div class="form-head">
+                      <h2>Book Appointment</h2>
+                  </div>
+                  <div class="form-body">
+                    <form (ngSubmit)="onSubmit()">
+                  <div class="row form-row">
+                    <label for="name" class="form-label">Enter Full Name:</label>
+                        <input type="text" class="form-control" required #uname id="fullname" [(ngModel)]="user.fullname" name="fullname">
+                      </div>
+                      <div class="row form-row">
+                        <label for="number" class="form-label">Enter Phone Number:</label>
+                        <input type="text"  class="form-control" required id="mobilenumber" [(ngModel)]="user.mobilenumber" name="mobilenumber">
+                      </div>
+                       <div class="row form-row">
+                        <label for="email" class="form-label">Enter Email:</label>
+                        <input type="text"  class="form-control" required id="email" [(ngModel)]="user.email" name="email">
+                      </div>
+                      <div class="row form-row">
+                        <label for="specialists" class="form-label">Specialists:</label>
+                        <select class="form-control" required #spname  id="specialists" [(ngModel)]="user.specialists" name="specialists">
+                          
+                          <option >Cardialogist</option>
+                          <option >Gynecologist</option>
+                          <option >Neurologist</option>
+                          <option >Dentist</option>
+                        </select>
+                      </div>
+                    
+                      <div class="row form-row">
+                        <label for="doctor" class="form-label">Preferred Doctor:</label>
+                        
+                      <select class="form-control" required #dname id="doctor" [(ngModel)]="user.doctor" name="doctor">
+                        
+                          <option >Dr Siva Kumar</option>
+                          <option >Dr Monika</option>
+                          <option >Dr Priya</option>
+                          <option >Dr David</option>
+                        </select>
+                      </div>
+                      <div class="row form-row">
+                        <label for="reason" class="form-label">Reason for Consult Doctor:</label>
+                        
+                        <input type="text"  class="form-control" required  id="reason" [(ngModel)]="user.reason" name="reason">
+                      </div>
+                     <div class="row form-row">
+                      <label for="date" class="form-label">Appointment Date:</label>
+                        <input id="dat" type="date"  class="form-control"  required #d id="appointmentdate" [(ngModel)]="user.appointmentdate" name="appointmentdate">
+                      </div>
+                      <div class="row form-row">
+                        <label for="time" class="form-label">Appointment Time:</label>
+                        <input id="dat" type="time"  class="form-control"  required id="appointmenttime" [(ngModel)]="user.appointmenttime" name="appointmenttime">
+                      </div>
+                      
+                      <h6>Address Details</h6>
+                      <div class="form-group">
+                        <textarea class="form-control" rows="4" id="comment" id="address" [(ngModel)]="user.address" name="address"></textarea>
+                      </div>
+                      <br>
+
+                       <div class="row form-row">
+                         <button class="btn btn-success btn-appointment" type="submit" (click)="view()" >
+                           Book Appointment
+                         </button>
+                         
+                      </div>
+                      <div *ngIf="alert" class="alert alert-success fade show" role="alert">
+                        <strong>Success!</strong> You Booking Successfully!
+                      </div>
+                      </form>
+
+                  </div>
+              </div>
+          </div>
+
+          <div *ngIf="submitted">
+      
+            <div class="form-data">
+              <div class="form-head">
+                  <h2>Appointment Details</h2>
+              </div>
+              <div class="form-body">
+                <table>
+                  <div class="row form-row">
+                    <tr>
+                    <td>Name:</td><td>{{fullname}}</td>
+                    </tr>
+                    </div>
+                    <div class="row form-row">
+                      <tr>
+                        <td>Specialists:</td><td>{{specialists}}</td>
+                        </tr>
+                      </div>
+                    <div class="row form-row">
+                      <tr>
+                        <td>Doctor Name:</td><td>{{doctor}}</td>
+                        </tr>
+                      </div>
+                      <div class="row form-row">
+                        <tr>
+                          <td>Appointment Date:</td><td>{{appointmentdate}}</td>
+                          </tr>
+                        </div>
+                        <div class="row form-row">
+                          <tr>
+                            <td>Appointment Time:</td><td>{{appointmenttime}}</td>
+                            </tr>
+                          </div>
+                        <div class="row form-row">
+                          <tr>
+                            <td>Appointment Status:</td><td>pending</td>
+                            </tr>
+                          </div>
+                          <div class="row form-row">
+                            <button class="btn btn-success btn-appointment" (click)="submitted=false">
+                              Back
+                            </button>
+                            
+                         </div>
+                          </table>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    </div>
+          </div>
+          
+  
+      
+      
